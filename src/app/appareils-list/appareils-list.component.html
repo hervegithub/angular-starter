@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <h2>Liste des appareils</h2>
+      <ul class="list-group">
+        <app-appareils *ngFor='let appareil of appareils' [appareilName]='appareil.name'
+        [isActif]='appareil.isActif'>
+        </app-appareils>
+      </ul>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <h2>Nouveau appreil</h2>
+      <div>
+        <label>Nom de l'appareil</label>
+        <p>
+          <input type="text" class="form-control" [(ngModel)]="app.name">
+        </p>
+        <div>
+          <button class="btn btn-success" (click)="addAppareil()">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

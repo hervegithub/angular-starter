@@ -1,0 +1,12 @@
+<li class="list-group-item">
+  <div>
+    <h3>appareil : {{appareilName}} ===> {{isActif}}</h3>
+    <div class="marge_sup">
+      <input type="text" class="form-control" [(ngModel)]="appareilName">
+    </div>
+    <div class="marge_sup">
+      <button class="btn btn-success" [disabled]="isActif==='Allumer'"
+      (click)="onAllumer()">Allumer</button>
+    </div>
+  </div>
+</li>
